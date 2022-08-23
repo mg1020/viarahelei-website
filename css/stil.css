@@ -8,7 +8,9 @@
          box-sizing: border-box;
          font-family: "Poppins", sans-serif;
       }
-
+h {
+font-size:clamp(3rem, 1rem + 10vw, 5rem);
+}
 .wrapper {
 text-align: center;
 }
@@ -17,7 +19,7 @@ text-align: center;
          min-height: 80px;
          min-width: 80px;
          margin: 10px;
-         float: left;
+         float: center;
          cursor: pointer;
          background: #fff;
          overflow: hidden;
