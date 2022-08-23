@@ -8,9 +8,14 @@
          box-sizing: border-box;
          font-family: "Poppins", sans-serif;
       }
+
+.wrapper {
+text-align: center;
+}
+
       .button {
-         height: 60px;
-         width: 60px;
+         height: 80px;
+         width: 80px;
          margin: 10px;
          float: left;
          cursor: pointer;
