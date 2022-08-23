@@ -16,8 +16,8 @@ text-align: center;
 }
 
       .button {
-         height: 3rem;
-         width: 3rem;
+         height: 60px;
+         width: 60px;
          margin: 10px;
          float: center;
          cursor: pointer;
