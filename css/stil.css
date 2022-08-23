@@ -1,49 +1,73 @@
-ul, ol {
-   font-family:'Bad Script', cursive;
-} 
-ul.ingred {  /*sau simplu, .ingred */
-   color: #880000;
-   font-size: 14px;
-}
+ @import
+      url("https://fonts.googleapis.com/css?family=Poppons:400,500,700&display=swap");
 
-ol.prepa {
-   color: #0000CC;
-   font-size: 12px;
-}
 
-table {width: 90%;
-margin: 0 auto;}
+      * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         font-family: "Poppins", sans-serif;
+      }
+      .button {
+         height: 60px;
+         width: 60px;
+         margin: 10px;
+         float: left;
+         cursor: pointer;
+         background: #fff;
+         overflow: hidden;
+         border-radius: 10px;
+         line-height: 60px;
 
-table, th, td {border: 1px solid #9bbb59;
-	border-collapse: collapse;
-	font-family: 'Roboto Condense';
-	font-size: 18px;
-	}th, td {
-		padding: 5px;
-	}
+         transition: all 0.3s ease-in-out;
+         box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+      }
+      .button .icon{
+         height: 60px;
+         width: 60px;
+         display: inline-block;
+         transition: all 0.3s ease-in-out;
+         text-align: center;
+         border-radius: 10px;
+      }
 
-th {
-	text-align: center;
-	font-weight: bold;
-	background-color: #9bbb59;
-	font-size: 1.2em;
-}
+      .button .icon i{
+         font-size: 25px;
+         transition: all 0.3s ease-in-out;
+         line-height: 60px;
 
-td {
-	/*width: 25px;*/
-	vertical-align: middle;
-	text-align: center;
-}
+      }
 
-tr.fundal{
-	background-color: #ccffcc;
-}
-td.bold{
-	font-weight: bold;
-}
-td.alb{
-	color: #fff;
-}
-td.fond {
-	background-color: red;
-}
+
+      .button span{
+         font-size: 20px;
+         font-weight: 500;
+         line-height: 60px;
+         margin-left: 10px;
+      }
+
+      .button:nth-child(1):hover .icon{
+         background: #4267b2;
+      }
+
+      .button:nth-child(1)span{
+         color: #4267b2;
+      }
+
+      .button:hover i{
+         color:  #fff;
+      }
+
+
+
+
+      .button:hover {
+         width: 200px;
+      }
+      .background_image {
+         background-image: url('./RV_FINAL_Rom.jpg');
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 100vh;
+         
+      }
