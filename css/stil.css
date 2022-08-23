@@ -83,6 +83,11 @@ text-align: center;
   position: relative;
  }
  
+ background {
+ width: 90vh;
+ }
+ 
+ 
 }
  
 
