@@ -1,0 +1,49 @@
+ul, ol {
+   font-family:'Bad Script', cursive;
+} 
+ul.ingred {  /*sau simplu, .ingred */
+   color: #880000;
+   font-size: 14px;
+}
+
+ol.prepa {
+   color: #0000CC;
+   font-size: 12px;
+}
+
+table {width: 90%;
+margin: 0 auto;}
+
+table, th, td {border: 1px solid #9bbb59;
+	border-collapse: collapse;
+	font-family: 'Roboto Condense';
+	font-size: 18px;
+	}th, td {
+		padding: 5px;
+	}
+
+th {
+	text-align: center;
+	font-weight: bold;
+	background-color: #9bbb59;
+	font-size: 1.2em;
+}
+
+td {
+	/*width: 25px;*/
+	vertical-align: middle;
+	text-align: center;
+}
+
+tr.fundal{
+	background-color: #ccffcc;
+}
+td.bold{
+	font-weight: bold;
+}
+td.alb{
+	color: #fff;
+}
+td.fond {
+	background-color: red;
+}
