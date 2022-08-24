@@ -75,7 +75,7 @@ text-align: center;
          background-image: url('../RV_FINAL_Rom.jpg');
          background-size: cover;
          background-repeat: no-repeat;
-         width: 100vh;
+         max-width: 100vh;
          min-height: 100vh;
          
       }
