@@ -1,96 +1,263 @@
- @import
-      url("https://fonts.googleapis.com/css?family=Poppons:400,500,700&display=swap");
-
-
-      * {
-         margin: 20;
-         padding:20;
-         box-sizing: border-box;
-         font-family: "Poppins", sans-serif;
-      }
-h {
-font-size:clamp(3rem, 1rem + 10vw, 5rem);
-}
-.wrapper {
-text-align: center;
+* {
+   box-sizing: border-box;
 }
 
-      .button {
-         height: 60px;
-         width: 60px;
-         margin: 10px;
-         float: center;
-         cursor: pointer;
-         background: #fff;
-         overflow: hidden;
-         border-radius: 10px;
-         line-height: 60px;
-
-         transition: all 0.3s ease-in-out;
-         box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-      }
-      .button .icon{
-         height: 60px;
-         width: 60px;
-         display: inline-block;
-         transition: all 0.3s ease-in-out;
-         text-align: center;
-         border-radius: 10px;
-      }
-
-      .button .icon i{
-         font-size: 25px;
-         transition: all 0.3s ease-in-out;
-         line-height: 60px;
-
-      }
-
-
-      .button span{
-         font-size: 20px;
-         font-weight: 500;
-         line-height: 60px;
-         margin-left: 10px;
-      }
-
-      .button:nth-child(1):hover .icon{
-         background: #4267b2;
-      }
-
-      .button:nth-child(1)span{
-         color: #4267b2;
-      }
-
-      .button:hover i{
-         color:  #fff;
-      }
-
-
-
-
-      .button:hover {
-         min-width: 200px;
-      }
-      .background_image {
-         background-image: url('../RV_FINAL_Rom.jpg');
-         background-size: cover;
-         background-repeat: no-repeat;
-         width: 100vh;
-         min-height: 100vh;
-         
-      }
-
-@media only screen and (max-width:700px){
- button {
- width: 18%;
-  position: relative;
- }
- 
- background {
- width: 90vh;
- }
- 
- 
+aside, article, body, div, footer, header, html, nav, ol, ul, li, p {
+   margin: 0;
+   padding: 0;
 }
- 
 
+header.hprincipal {
+   background-image: url('../imagini/vin-sun-rise2.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   max-width: 200vh;
+   height: 14rem;
+   
+}
+
+
+header.hprincipal-m {
+   background-image: url('../imagini/marturie2.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   max-width: 200vh;
+   height: 14rem;
+   
+}
+
+
+header.hprincipal-dn {
+   background-image: url('../imagini/thereishope.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   max-width: 200vh;
+   height: 14rem;
+}
+
+
+header.hprincipal-c {
+   background-image: url('../imagini/img12.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   max-width: 200vh;
+   height: 14rem;
+   
+}
+
+
+
+header img{
+   opacity: 0.7;
+}
+
+header.hprincipal-m img{
+   opacity: 0.3;
+}
+
+header img:hover{
+   opacity: 1.0;
+}
+
+
+
+.logoheader {
+   display: block;
+   float: right;
+   margin-top: 20px;
+}
+
+
+.button {
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+        float: left;
+        cursor: pointer;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 10px;
+        line-height: 60px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        float: right;
+     }
+     .button .icon{
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        border-radius: 10px;
+     }
+
+     .button .icon i{
+        font-size: 25px;
+        transition: all 0.3s ease-in-out;
+        line-height: 60px;
+
+     }
+
+
+     .button span{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+     }
+
+     .button:nth-child(1):hover .icon{
+        background: #4267b2;
+     }
+
+     .button:nth-child(1)span{
+        color: #4267b2;
+     }
+
+     .<!-- button:hover i{
+        color:  #fff;
+     } -->
+
+     .button:hover {
+        width: 200px;
+     }
+     .background_image {
+        background-image: url('./RV_FINAL_Rom.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        
+     }
+
+nav {
+   background-color: #faae0a;
+   height: 2.5rem;
+   padding-left: 2rem;
+}
+
+nav ul {
+   list-style-type: none; /* Suprima marcatorii */
+}
+
+nav ul li {   /* selectorul putea fi nav li  */
+   float: left;
+  /* width: 120px; */
+}
+
+nav a:link, nav a:visited {
+   color: #190763;
+   font-weight: bold;
+   display:block;
+   width:12rem;
+   text-align: center;
+   text-decoration: none;
+   height: 2.5rem;
+   line-height: 2.5rem;
+}
+
+nav a:hover {
+   background-color: #0ca66d;
+}
+
+.activ a:link, .activ a:visited {
+   background-color: #0ca66d;
+}
+
+main {
+   padding: 0.3rem;
+
+}
+
+main article {
+   width: 98%;
+   margin: 1% auto;
+   background-color: #e3edc0;
+   padding: 1rem;
+   border-radius: 5px;
+}
+
+aside {
+  padding: 0.3em;
+  overflow: hidden;
+}
+
+aside article {
+   width: 32%;
+   padding: 0.5rem;
+   /*background-color: #FFFFFF;*/
+   border-radius: 5px;
+   float: left;
+}
+
+aside .stanga {
+       margin: 0 0 1% 1%;
+}
+
+
+aside .stangac {
+   width: 48%;
+       margin: 0 0 1% 1%;
+}
+
+aside .mijloc {
+   margin: 0 1% 1% 1%;
+   border-left-style:dashed;
+   border-left-width:1px;
+   border-left-color:#ffcc00;
+   border-right-style:dashed;
+   border-right-width:1px;
+   border-right-color:#ffcc00;
+}
+
+aside .dreapta {
+   margin: 0 1% 1% 0;
+}
+
+aside .dreaptac {
+   width: 48%;
+   margin: 0 1% 1% 0;
+   float: right;
+}
+
+aside h1, aside p {
+   color: #190763;
+}
+
+#continutPagina {
+   background-color: #ddeda8;
+}
+
+
+.feed {
+   border:20px solid #601D0C;
+   width: 70%;
+   padding-left: 10px;
+   margin-left: 10px;
+}
+
+.marturie {
+   border:20px solid #601D0C;
+   width: 70%;
+   margin-bottom: 7px;
+   padding-left: 10px;
+   margin-left: 10px;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+
+
+
+footer {
+   border:2px solid black;
+   margin-bottom: 7px;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+   background-color: #0ca66d;
+}
+
+footer p {
+   text-align: center;
+   height: 3.5rem;
+   line-height: 1.8rem;
+}
