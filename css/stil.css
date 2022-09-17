@@ -297,10 +297,9 @@ footer p {
 
     }
     
-    .meniu {
-        display: none;
-        
-    }
+    /*.meniu {
+        display: none;  
+    }*/
    
     .navbar {
         flex-direction: column;
