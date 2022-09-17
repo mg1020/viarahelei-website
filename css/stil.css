@@ -297,30 +297,28 @@ footer p {
    }
    
    .meniu {
-       display: none;
-       
+       display: none;   
    }
-  
    .navbar {
        flex-direction: column;
        align-items: flex-start;
    }
-
    .navbar-links ul {
        width: 100%;
        flex-direction: column;
    }
-
    .navbar-links.active {
    background-color: #0ca66d;  
 }
-
-
-
-
-
-
-
+   nav {
+        height: 5rem;
+    }
+    .logoheader {
+        width: 80px;
+        height: auto;
+        float: left;
+    }
+   
   .dreapta {
    display:  none;
   }
@@ -334,7 +332,9 @@ footer p {
    display: none;
   }
   .stangac {
-   width: 100%;
-  }
-   
+    min-width: 400px;
+    padding: 3px;
+    border: 2px;
+    display: inline;
+   }
 }
