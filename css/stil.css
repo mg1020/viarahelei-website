@@ -141,6 +141,7 @@ nav ul {
 
 nav ul li {   /* selectorul putea fi nav li  */
    float: left;
+   margin-left: -2rem;
   /* width: 120px; */
 }
 
@@ -291,26 +292,31 @@ footer p {
 }
 
 @media (max-width: 750px){
-   .toggle-button .bar {
-       display: none;
+    .toggle-button .bar {
+        display: none;
 
-   }
+    }
+    
+    .meniu {
+        display: none;
+        
+    }
    
-   .meniu {
-       display: none;   
-   }
-   .navbar {
-       flex-direction: column;
-       align-items: flex-start;
-   }
-   .navbar-links ul {
-       width: 100%;
-       flex-direction: column;
-   }
-   .navbar-links.active {
-   background-color: #0ca66d;  
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links:active {
+    background-color: #0ca66d; 
 }
-   nav {
+
+    nav {
         height: 5rem;
     }
     .logoheader {
@@ -318,23 +324,44 @@ footer p {
         height: auto;
         float: left;
     }
-   
-  .dreapta {
-   display:  none;
-  }
-  .stanga{
-   display: none;
-  }
-  .mijloc {
-   width: 100%;
-  }
-  .dreaptac {
-   display: none;
-  }
-  .stangac {
+
+   .dreapta {
+    display:  none;
+   }
+   .stanga{
+    display: none;
+   }
+   .mijloc {
+    width: 100%;
+   }
+   .dreaptac {
+    display: none;
+    width: 1%;
+
+   }
+   .stangac {
     min-width: 400px;
     padding: 3px;
     border: 2px;
     display: inline;
    }
+
+  /* li {
+    width: 50%;
+   }
+   li a {
+    margin-left: 0;
+   }*/
+
+   ul {
+    align-items: flex-start;
+    justify-content: start;
+   }
+
+    .navbar {
+        padding-left: -4rem;
+    }
+    .navbar-links li a {
+        padding-left: -4rem;
+    }
 }
