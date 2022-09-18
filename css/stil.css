@@ -297,7 +297,7 @@ footer p {
     line-height: 1.8rem;
 }
 
-@media (max-width: 750px){
+@media (max-width: 800px){
     .toggle-button .bar {
         display: none;
 
