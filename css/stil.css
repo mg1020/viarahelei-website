@@ -42,6 +42,8 @@ header.hprincipal-c {
     background-repeat: no-repeat;
     max-width: 200vh;
     height: 14rem;
+    overflow: hidden; /* This prevents the header from covering the nav */
+    position: relative;
     
 }
 
@@ -146,7 +148,7 @@ nav ul {
 
 nav ul li {   /* selectorul putea fi nav li  */
     float: left;
-    margin-left: 0;
+    margin-left: 0.5rem;
    /* width: 120px; */
     list-style: none;
 }
@@ -268,6 +270,7 @@ aside h1, aside p {
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
+    display: none;
     
 }
 
@@ -311,7 +314,7 @@ footer p {
 
 @media (max-width: 800px){
     .toggle-button .bar {
-        display: none;
+        display: flex;
 
     }
     
