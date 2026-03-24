@@ -48,7 +48,7 @@ header.hprincipal-c {
 
 
 header img{
-    opacity: 0.7;
+    opacity: 1.0;
 }
 
 header.hprincipal-m img{
@@ -56,7 +56,7 @@ header.hprincipal-m img{
 }
 
 header img:hover{
-    opacity: 1.0;
+    opacity: 0.8;
 }
 
 
@@ -130,8 +130,8 @@ header img:hover{
       }
 
 nav {
-    background-color: #f0ddb4;
-    /* vechea culoare galbena era: #faae0a, #f0e7b4 */
+    background-color: #f0e7b4;
+    /* vechea culoare galbena era: #faae0a,  #f0ddb4*/
     height: 2.5rem;
     padding-left: 2rem;
 }
@@ -162,7 +162,7 @@ nav a:link, nav a:visited {
 }
 
 .navbar-links.active {
-    background-color: #6fd6b0;  
+    background-color: #6fd570;  
 }
 
 .activ a:link, .activ a:visited {
