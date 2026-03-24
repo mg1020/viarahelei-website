@@ -137,6 +137,7 @@ nav {
     position: relative;
     z-index: 1000;
     clear: both;
+    display: block;
 }
 
 nav ul {
@@ -145,8 +146,9 @@ nav ul {
 
 nav ul li {   /* selectorul putea fi nav li  */
     float: left;
-    margin-left: -2rem;
+    margin-left: 0;
    /* width: 120px; */
+    list-style: none;
 }
 
 nav a:link, nav a:visited {
@@ -171,10 +173,10 @@ nav a:link, nav a:visited {
     background-color: #6fd6b0;
 }
 
-
-.activ a:link, .activ a:visited {
-    background-color: #6fd6b0;
-    /* #0ca66d vehea culoare */
+.navbar-links li.activ a {
+    background-color: #6fd6b0 !important;
+    color: #190763 !important;
+    pointer-events: auto; /* Ensures the link remains clickable */
 }
 
 main {
