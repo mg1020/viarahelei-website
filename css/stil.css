@@ -134,6 +134,9 @@ nav {
     /* vechea culoare galbena era: #faae0a,  #f0ddb4*/
     height: 2.5rem;
     padding-left: 2rem;
+    position: relative;
+    z-index: 1000;
+    clear: both;
 }
 
 nav ul {
