@@ -180,7 +180,7 @@ nav a:link, nav a:visited {
 .navbar-links li.activ a {
     background-color: #6fd6b0 !important;
     color: #190763 !important;
-   /* pointer-events: auto; /* Ensures the link remains clickable */
+    pointer-events: auto; /* Ensures the link remains clickable */
     display: block;
     width: 100%;
 }
