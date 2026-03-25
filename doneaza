@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Despre Noi</title>
+	<link rel="icon" type="image/png" href="imagini/icon2.ico" />
+	<link href="css/stil.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+</head>
+<body>
 
+	<header class="hprincipal-dn">
+      		<img class="logoheader" src="imagini/RV-logo-ds2.jpg">
+         	<div class="button">
+            	<div class="icon">
+                	<i class="fab fa-facebook"></i>
+            	</div>
+       			<span><a href="https://www.facebook.com/viarahelei">Facebook</a></span>
+         	</div>
+   		</header>
+
+
+   		<nav class="navbar">
+    		<div class="navbar-links">
+      		  <ul>
+          		<li class="meniu"><a href="index.html">Via RAHELEI</a></li>
+                <li class="activ"><a href="prezent.html">DESPRE NOI</a></li>
+            	<li class="meniu"><a href="./marturii.html">MARTURII</a></li>
+            	<li class="meniu"><a href="contact.html">CONTACT</a></li>
+				<li class="meniu"><a href="doneaza.html">CONTRIBUIE</a></li>
+        	</ul>
+   			</div>
+   		 	<a href="#" class="toggle-button">
+      	 		<span class="bar"></span>
+       	 		<span class="bar"></span>
+        		<span class="bar"></span>
+				<span class="bar"></span>
+   		 	</a>
+		</nav>
