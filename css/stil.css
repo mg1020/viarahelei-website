@@ -311,68 +311,75 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Navbar Container */
+    /* 1. Reset Nav */
     nav.navbar {
-        height: 2.5rem !important; /* Keep the bar slim */
+        height: 3rem !important;
+        background-color: #f0e7b4 !important;
         position: relative;
-        overflow: visible; /* Crucial: allows dropdown to spill out */
+        display: block !important;
+        overflow: visible !important;
+        z-index: 99999 !important;
     }
 
     /* 2. Hide links by default */
     .navbar-links {
         display: none !important;
         width: 100%;
-        background-color: #f0e7b4;
+        background-color: #f0e7b4 !important;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        z-index: 100000;
     }
 
-    /* 3. The Dropdown (When Active) */
+    /* 3. The "Active" state (Check the dot before 'active') */
     .navbar-links.active {
         display: block !important;
-        position: absolute;
-        top: 2.5rem; /* Sits right under the nav bar */
-        left: 0;
-        width: 100%;
-        z-index: 10000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
     .navbar-links ul {
+        display: flex !important;
         flex-direction: column !important;
-        width: 100%;
-        background-color: #f0e7b4;
+        padding: 0;
+        margin: 0;
     }
 
     .navbar-links li {
-        width: 100%;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        width: 100% !important;
+        list-style: none;
     }
 
     .navbar-links li a {
-        width: 100% !important; /* Forces link to fill screen width */
-        padding: 15px 0;
-        display: block;
-        height: auto !important; /* Allows text to breathe */
+        display: block !important;
+        width: 100% !important;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        height: auto !important;
         line-height: normal !important;
     }
 
-    /* 4. The Hamburger Icon */
+    /* 4. The Button - IMPORTANT: Added background to make it easier to tap */
     .toggle-button {
         display: flex !important;
         position: absolute;
-        top: 8px;
-        right: 15px;
-        width: 30px;
-        height: 20px;
+        top: 5px;
+        right: 10px;
+        width: 40px;
+        height: 35px;
         flex-direction: column;
-        justify-content: space-between;
-        z-index: 10001;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100001;
+        cursor: pointer;
+        background: transparent;
     }
 
     .toggle-button .bar {
         display: block !important;
-        width: 100%;
+        width: 25px;
         height: 3px;
-        background-color: #190763;
+        background-color: #190763 !important;
         border-radius: 5px;
     }
 }
