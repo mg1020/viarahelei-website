@@ -382,4 +382,34 @@ footer p {
         background-color: #190763 !important;
         border-radius: 5px;
     }
+
+    /* 1. Reset the main content area */
+main article {
+    width: 100% !important;
+    margin: 10px 0 !important;
+}
+
+/* 2. Stack the 'Aside' articles (Stanga, Mijloc, Dreapta) */
+aside article {
+    width: 100% !important; /* Take up the full screen width */
+    float: none !important;  /* Stop them from sitting side-by-side */
+    margin: 10px 0 !important;
+    border-left: none !important; /* Optional: removes the dashed lines between them */
+    border-right: none !important;
+    display: block !important;
+}
+
+/* 3. Ensure images inside articles don't overflow */
+aside article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Centers the images */
+}
+
+/* 4. Fix for the 'stangac' and 'dreaptac' classes if you use them on other pages */
+aside .stangac, aside .dreaptac {
+    width: 100% !important;
+    float: none !important;
+}
 }
