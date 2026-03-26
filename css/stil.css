@@ -311,60 +311,71 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Keep your logo and general layout fixes */
-    nav {
-        height: auto; /* Allow it to grow if links stack */
+    /* 1. Reset Header and Logo */
+    header.hprincipal, header.hprincipal-m, header.hprincipal-dn, header.hprincipal-c {
+        height: auto;
+        min-height: 12rem;
     }
 
     .logoheader {
-        width: 80px;
+        width: 120px; /* Adjusted for better visibility */
         height: auto;
-        float: left;
+        float: none;
+        margin: 10px auto;
+        display: block;
     }
 
-    /* 2. Fix the Toggle Button for Mobile */
+    /* 2. Toggle Button Styling */
     .toggle-button {
-        display: flex !important; /* Show it on mobile */
-        height: 50px;
-        width: 50px;
+        display: flex !important; 
         position: absolute;
-        right: 10px;
-        top: 10px;
+        top: 0.5rem;
+        right: 1rem;
+        width: 35px;
+        height: 25px;
+        z-index: 10000;
+        cursor: pointer;
     }
 
     .toggle-button .bar {
-        display: block; /* Make sure the white bars show up */
+        display: block !important;
+        width: 100%;
+        height: 4px;
+        background-color: #190763; /* Changed to dark so it's visible on light yellow nav */
+        border-radius: 10px;
     }
 
-    /* 3. Make the links stack vertically on phones */
+    /* 3. The Menu Logic */
+    .navbar {
+        height: auto !important; /* Allow nav to expand when menu is open */
+    }
+
+    .navbar-links {
+        display: none; /* Hidden by default on mobile */
+        width: 100%;
+    }
+
+    /* This class is added via JavaScript when you click the button */
+    .navbar-links.active {
+        display: block; 
+    }
+
     .navbar-links ul {
         flex-direction: column;
         width: 100%;
-        padding-left: 0;
     }
 
     .navbar-links li a {
-        width: 100%; /* Links take full width on mobile */
-        text-align: left;
-        padding-left: 1rem;
+        width: 100% !important;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    /* 4. Keep your existing content hiding rules */
-    .dreapta, .stanga, .dreaptac {
-        display: none;
-    }
-
-    .mijloc {
-        width: 100%;
-    }
-
-    .stangac {
-        min-width: 400px;
-        padding: 3px;
-        display: inline;
-    }
-
-    .pttel {
-        display: inline;
+    /* 4. Content Stacking */
+    aside article {
+        width: 100% !important;
+        float: none !important;
+        margin: 10px 0 !important;
+        display: block !important; /* Overriding your 'display: none' so content stays visible */
     }
 }
