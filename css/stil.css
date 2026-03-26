@@ -311,114 +311,109 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Center the Logo and give the header space */
-    header.hprincipal, header.hprincipal-m, header.hprincipal-dn, header.hprincipal-c {
-        height: auto !important;
-        min-height: 12rem;
+    /* 1. Reset Nav */
+    nav.navbar {
+        height: 3rem !important;
+        background-color: #f0e7b4 !important;
         position: relative;
         display: block !important;
+        overflow: visible !important;
+        z-index: 99999 !important;
     }
 
-    .logoheader {
-        float: none !important;
-        margin: 20px auto 10px auto !important;
-        width: 100px;
-        display: block !important;
-    }
-
-    /* 2. The Navigation Bar (The Yellow Belt) */
-    nav.navbar {
-        height: 3.5rem !important; 
-        background-color: #f0e7b4 !important;
-        position: relative; /* This is the "anchor" for the buttons */
-        display: block !important;
-        clear: both;
-    }
-
-    /* 3. Force Facebook Button onto the Nav Bar (Left) */
-    .button {
-        position: absolute !important;
-        top: 5px; /* Adjust this to move it up or down inside the yellow bar */
-        left: 10px;
-        margin: 0 !important;
-        width: 45px !important;
-        height: 45px !important;
-        z-index: 100005 !important;
-        float: none !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        border-radius: 8px;
-    }
-
-    .button span {
-        display: none !important; /* Hide "Facebook" text */
-    }
-
-    .button .icon {
-        width: 45px !important;
-        height: 45px !important;
-        line-height: 45px !important;
-    }
-
-    /* 4. Force Menu Button onto the Nav Bar (Right) */
-    .toggle-button {
-        display: flex !important;
-        position: absolute !important;
-        top: 12px; /* Adjust this to align with the Facebook icon */
-        right: 15px;
-        width: 35px;
-        height: 25px;
-        z-index: 100006 !important;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .toggle-button .bar {
-        display: block !important;
-        width: 100%;
-        height: 4px;
-        background-color: #190763 !important;
-        border-radius: 5px;
-    }
-
-    /* 5. The Dropdown Menu */
+    /* 2. Hide links by default */
     .navbar-links {
         display: none !important;
         width: 100%;
         background-color: #f0e7b4 !important;
         position: absolute;
-        top: 3.5rem; 
+        top: 3rem;
         left: 0;
         z-index: 100000;
     }
 
+    /* 3. The "Active" state (Check the dot before 'active') */
     .navbar-links.active {
         display: block !important;
     }
 
     .navbar-links ul {
+        display: flex !important;
         flex-direction: column !important;
         padding: 0;
         margin: 0;
     }
 
+    .navbar-links li {
+        width: 100% !important;
+        list-style: none;
+    }
+
     .navbar-links li a {
+        display: block !important;
         width: 100% !important;
         padding: 15px;
         text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        height: auto !important;
+        line-height: normal !important;
     }
 
-    /* 6. Content Stacking Fix */
-    main article, aside article, aside .stangac, aside .dreaptac {
-        width: 100% !important;
-        float: none !important;
-        margin: 10px 0 !important;
-        display: block !important;
+    /* 4. The Button - IMPORTANT: Added background to make it easier to tap */
+    .toggle-button {
+        display: flex !important;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 40px;
+        height: 35px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100001;
+        cursor: pointer;
+        background: transparent;
     }
+
+    .toggle-button .bar {
+        display: block !important;
+        width: 25px;
+        height: 3px;
+        background-color: #190763 !important;
+        border-radius: 5px;
+    }
+
+    /* 1. Reset the main content area */
+main article {
+    width: 100% !important;
+    margin: 10px 0 !important;
 }
+
+/* 2. Stack the 'Aside' articles (Stanga, Mijloc, Dreapta) */
+aside article {
+    width: 100% !important; /* Take up the full screen width */
+    float: none !important;  /* Stop them from sitting side-by-side */
+    margin: 10px 0 !important;
+    border-left: none !important; /* Optional: removes the dashed lines between them */
+    border-right: none !important;
+    display: block !important;
+}
+
+/* 3. Ensure images inside articles don't overflow */
+aside article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Centers the images */
+}
+
+/* 4. Fix for the 'stangac' and 'dreaptac' classes if you use them on other pages */
+aside .stangac, aside .dreaptac {
+    width: 100% !important;
+    float: none !important;
+}
+}
+
 video {
     max-width: 100% !important;
     height: auto !important;
