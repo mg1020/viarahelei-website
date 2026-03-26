@@ -5,10 +5,25 @@
 	<title>Via Rahelei</title>
 	<link rel="icon" type="imagini/png" href="imagini/icon2.ico" />
 	<link href="css/stil.css" rel="stylesheet">
-	<script type="text/javascript" src="js/script.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.toggle-button');
+        var menu = document.querySelector('.navbar-links');
+        
+        if (btn && menu) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log("Button Tapped!");
+                menu.classList.toggle('active');
+            });
+        } else {
+            console.error("Menu elements not found!");
+        }
+    });
+</script>
 <body>
 	<div id="container">
 
