@@ -364,7 +364,7 @@ footer p {
     top: 2.5rem; /* Puts it right under the nav bar */
     left: 0;
     width: 100%;
-    z-index: 10001;
+    z-index: 1000;
 }
 
 .navbar-links.active ul {
