@@ -413,3 +413,8 @@ aside .stangac, aside .dreaptac {
     float: none !important;
 }
 }
+
+video {
+    max-width: 100% !important;
+    height: auto !important;
+}
