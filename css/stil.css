@@ -311,50 +311,23 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Reset the nav container so it doesn't cut off the dropdown */
-    nav.navbar {
-        height: 3rem !important; 
-        position: relative;
+    /* 1. Reset Header and Logo */
+    header.hprincipal, header.hprincipal-m, header.hprincipal-dn, header.hprincipal-c {
+        height: auto;
+        min-height: 12rem;
+    }
+
+    .logoheader {
+        width: 120px; /* Adjusted for better visibility */
+        height: auto;
+        float: none;
+        margin: 10px auto;
         display: block;
     }
 
-    /* 2. Hide the links by default */
-    .navbar-links {
-        display: none; 
-        width: 100%;
-    }
-
-    /* 3. The "Drop Down" part - This is what happens when you click */
-    .navbar-links.active {
-        display: block !important;
-        position: absolute;
-        top: 3rem; /* Positions it exactly under the nav bar */
-        left: 0;
-        background-color: #f0e7b4; /* Same color as your nav */
-        width: 100%;
-        z-index: 99999; /* Ensures it stays on top of the text/video */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .navbar-links ul {
-        flex-direction: column !important; /* Stack links vertically */
-        width: 100%;
-    }
-
-    .navbar-links li {
-        width: 100%;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .navbar-links li a {
-        width: 100% !important;
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    /* 4. Fix the toggle button position */
+    /* 2. Toggle Button Styling */
     .toggle-button {
-        display: flex !important;
+       display: flex !important;
         position: absolute;
         top: 10px;
         right: 15px;
@@ -363,4 +336,57 @@ footer p {
         width: 30px;
         height: 20px;
     }
+
+    .toggle-button .bar {
+        display: block !important;
+        width: 100%;
+        height: 4px;
+        background-color: #190763; /* Changed to dark so it's visible on light yellow nav */
+        border-radius: 10px;
+    }
+
+    /* 3. The Menu Logic */
+    .navbar {
+        height: auto !important; /* Allow nav to expand when menu is open */
+    }
+
+    .navbar-links {
+       height: 3rem !important; 
+        position: relative;
+        display: block;
+    }
+
+    /* This class is added via JavaScript when you click the button */
+  /* Force the menu to show and stack links */
+.navbar-links.active {
+    display: block !important;
+    background-color: #f0e7b4; /* Match your nav color */
+    position: absolute;
+    top: 3rem; /* Puts it right under the nav bar */
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+.navbar-links.active ul {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+}
+
+    .navbar-links li a {
+        width: 100% !important;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* 4. Content Stacking */
+    aside article {
+        width: 100% !important;
+        float: none !important;
+        margin: 10px 0 !important;
+        display: block !important; /* Overriding your 'display: none' so content stays visible */
+    }
+}
+
