@@ -311,48 +311,51 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Reset Nav Height */
+    /* 1. Navbar Container */
     nav.navbar {
-        height: 2.5rem !important;
+        height: 2.5rem !important; /* Keep the bar slim */
         position: relative;
+        overflow: visible; /* Crucial: allows dropdown to spill out */
     }
 
-    /* 2. HIDE the menu completely by default */
+    /* 2. Hide links by default */
     .navbar-links {
-        display: none !important; 
+        display: none !important;
+        width: 100%;
+        background-color: #f0e7b4;
     }
 
-    /* 3. SHOW the menu when .active is added by JS */
+    /* 3. The Dropdown (When Active) */
     .navbar-links.active {
         display: block !important;
         position: absolute;
-        top: 2.5rem;
+        top: 2.5rem; /* Sits right under the nav bar */
         left: 0;
         width: 100%;
-        background-color: #f0e7b4;
         z-index: 10000;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    /* 4. Make the list vertical */
-    .navbar-links.active ul {
-        display: flex !important;
+    .navbar-links ul {
         flex-direction: column !important;
         width: 100%;
+        background-color: #f0e7b4;
     }
 
     .navbar-links li {
         width: 100%;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .navbar-links li a {
-        width: 100% !important;
+        width: 100% !important; /* Forces link to fill screen width */
         padding: 15px 0;
         display: block;
+        height: auto !important; /* Allows text to breathe */
+        line-height: normal !important;
     }
 
-    /* 5. Show the Toggle Button */
+    /* 4. The Hamburger Icon */
     .toggle-button {
         display: flex !important;
         position: absolute;
