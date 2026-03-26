@@ -311,52 +311,49 @@ footer p {
 }
 
 @media (max-width: 800px) {
-    /* 1. Reset Header and Center the Logo */
+    /* 1. Center the Logo and give the header space */
     header.hprincipal, header.hprincipal-m, header.hprincipal-dn, header.hprincipal-c {
         height: auto !important;
         min-height: 12rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centers everything inside the header */
-        padding-bottom: 20px;
+        position: relative;
+        display: block !important;
     }
 
     .logoheader {
         float: none !important;
         margin: 20px auto 10px auto !important;
-        width: 100px; /* Adjusted size for mobile */
-        height: auto;
+        width: 100px;
         display: block !important;
     }
 
-    /* 2. Navigation Bar (The "Track" for the buttons) */
+    /* 2. The Navigation Bar (The Yellow Belt) */
     nav.navbar {
         height: 3.5rem !important; 
         background-color: #f0e7b4 !important;
-        position: relative;
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between; /* Pushes items to the far left and right */
-        padding: 0 10px;
+        position: relative; /* This is the "anchor" for the buttons */
+        display: block !important;
         clear: both;
     }
 
-    /* 3. Facebook Button - Positioned on the LEFT of the nav */
+    /* 3. Force Facebook Button onto the Nav Bar (Left) */
     .button {
-        float: none !important;
-        position: relative;
+        position: absolute !important;
+        top: 5px; /* Adjust this to move it up or down inside the yellow bar */
+        left: 10px;
         margin: 0 !important;
         width: 45px !important;
         height: 45px !important;
+        z-index: 100005 !important;
+        float: none !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        z-index: 100002;
-        box-shadow: none; /* Optional: cleaner look for mobile */
+        background: #fff;
+        border-radius: 8px;
     }
 
     .button span {
-        display: none !important; /* Hides the word "Facebook" */
+        display: none !important; /* Hide "Facebook" text */
     }
 
     .button .icon {
@@ -365,28 +362,36 @@ footer p {
         line-height: 45px !important;
     }
 
-    /* 4. Menu Button - Positioned on the RIGHT of the nav */
+    /* 4. Force Menu Button onto the Nav Bar (Right) */
     .toggle-button {
         display: flex !important;
-        position: relative; /* Changed from absolute to play nice with Flexbox */
-        top: 0 !important;
-        right: 0 !important;
+        position: absolute !important;
+        top: 12px; /* Adjust this to align with the Facebook icon */
+        right: 15px;
         width: 35px;
         height: 25px;
-        z-index: 100001;
-        cursor: pointer;
+        z-index: 100006 !important;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    /* 5. Dropdown Menu logic */
+    .toggle-button .bar {
+        display: block !important;
+        width: 100%;
+        height: 4px;
+        background-color: #190763 !important;
+        border-radius: 5px;
+    }
+
+    /* 5. The Dropdown Menu */
     .navbar-links {
         display: none !important;
         width: 100%;
         background-color: #f0e7b4 !important;
         position: absolute;
-        top: 3.5rem; /* Exactly the height of the nav */
+        top: 3.5rem; 
         left: 0;
         z-index: 100000;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     .navbar-links.active {
@@ -395,15 +400,18 @@ footer p {
 
     .navbar-links ul {
         flex-direction: column !important;
+        padding: 0;
+        margin: 0;
     }
 
     .navbar-links li a {
         width: 100% !important;
         padding: 15px;
+        text-align: center;
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    /* 6. Content Stacking */
+    /* 6. Content Stacking Fix */
     main article, aside article, aside .stangac, aside .dreaptac {
         width: 100% !important;
         float: none !important;
@@ -411,7 +419,6 @@ footer p {
         display: block !important;
     }
 }
-
 video {
     max-width: 100% !important;
     height: auto !important;
