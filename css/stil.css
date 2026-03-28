@@ -310,6 +310,57 @@ footer p {
     line-height: 1.8rem;
 }
 
+form {
+  max-width: 500px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* This creates perfect vertical spacing between rows */
+}
+
+/* Row wrapper for each label and input */
+form p {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* Fixes label width to 100px, input takes rest */
+  align-items: center;
+  margin: 0; /* Let 'gap' handle the spacing instead */
+}
+
+/* Style for the input fields and textarea */
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  width: 100%; /* Ensures they fill the grid space */
+}
+
+/* Specific height for the message box */
+textarea {
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* Button styling to make it look "nittier" */
+button {
+  grid-column: 2; /* Aligns button with the input boxes, not the labels */
+  width: fit-content;
+  padding: 10px 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+
 @media (max-width: 800px) {
     /* 1. Reset Nav */
     nav.navbar {
