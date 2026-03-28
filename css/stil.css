@@ -389,7 +389,7 @@ button:hover {
 
 @media (max-width: 800px) {
     .logoheader {
-        opacity: 0.7; /* This makes the logo 30% transparent */
+        opacity: 0.6; /* This makes the logo 40% transparent */
     }
     /* 1. Fix the Nav Bar Layout */
    nav.navbar {
