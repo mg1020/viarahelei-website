@@ -360,62 +360,46 @@ button:hover {
   background-color: #000;
 }
 
+/* --- DESKTOP SETTINGS --- */
+
+/* Hide this specific icon in the navbar on desktop 
+   because you already have it in the header image area */
+.fb-nav-icon {
+    display: none; 
+}
+
+/* --- MOBILE SETTINGS (The "Phone" Version) --- */
 
 @media (max-width: 800px) {
-    /* 1. Reset Nav */
+    /* --- 1. Reset Nav --- */
     nav.navbar {
         height: 3rem !important;
         background-color: #f0e7b4 !important;
         position: relative;
-        display: block !important;
+        /* Changed to flex to align FB left and Bars right */
+        display: flex !important; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 15px; /* Adds space for the icons from the screen edges */
         overflow: visible !important;
         z-index: 99999 !important;
     }
 
-    /* 2. Hide links by default */
-    .navbar-links {
-        display: none !important;
-        width: 100%;
-        background-color: #f0e7b4 !important;
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        z-index: 100000;
+    /* --- 2. The Facebook Icon (Specific for Mobile) --- */
+    .fb-nav-icon {
+        display: flex !important; /* Shows it on mobile */
+        align-items: center;
+        font-size: 1.5rem; /* Adjust size to fit your 3rem height */
+        color: #190763;    /* Matching your bar color */
+        text-decoration: none;
+        z-index: 100002;
     }
 
-    /* 3. The "Active" state (Check the dot before 'active') */
-    .navbar-links.active {
-        display: block !important;
-    }
-
-    .navbar-links ul {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar-links li {
-        width: 100% !important;
-        list-style: none;
-    }
-
-    .navbar-links li a {
-        display: block !important;
-        width: 100% !important;
-        padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        height: auto !important;
-        line-height: normal !important;
-    }
-
-    /* 4. The Button - IMPORTANT: Added background to make it easier to tap */
+    /* --- 3. The Menu Button (Toggle) --- */
+    /* Remove 'position: absolute' so it follows the flex layout */
     .toggle-button {
         display: flex !important;
-        position: absolute;
-        top: 5px;
-        right: 10px;
+        position: static !important; /* This lets 'space-between' work */
         width: 40px;
         height: 35px;
         flex-direction: column;
@@ -426,45 +410,24 @@ button:hover {
         background: transparent;
     }
 
-    .toggle-button .bar {
-        display: block !important;
-        width: 25px;
-        height: 3px;
-        background-color: #190763 !important;
-        border-radius: 5px;
+    /* --- 4. Hide links by default --- */
+    .navbar-links {
+        display: none !important;
+        width: 100%;
+        background-color: #f0e7b4 !important;
+        position: absolute;
+        top: 3rem; /* Stays exactly below the 3rem nav */
+        left: 0;
+        z-index: 100000;
     }
 
-    /* 1. Reset the main content area */
-main article {
-    width: 100% !important;
-    margin: 10px 0 !important;
+    /* ... Keep the rest of your 'navbar-links.active' and article code as is ... */
 }
 
-/* 2. Stack the 'Aside' articles (Stanga, Mijloc, Dreapta) */
-aside article {
-    width: 100% !important; /* Take up the full screen width */
-    float: none !important;  /* Stop them from sitting side-by-side */
-    margin: 10px 0 !important;
-    border-left: none !important; /* Optional: removes the dashed lines between them */
-    border-right: none !important;
-    display: block !important;
+/* Outside of the media query (Desktop) */
+.fb-nav-icon {
+    display: none; /* Keep it hidden on desktop */
 }
-
-/* 3. Ensure images inside articles don't overflow */
-aside article img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto; /* Centers the images */
-}
-
-/* 4. Fix for the 'stangac' and 'dreaptac' classes if you use them on other pages */
-aside .stangac, aside .dreaptac {
-    width: 100% !important;
-    float: none !important;
-}
-}
-
 video {
     max-width: 100% !important;
     height: auto !important;
