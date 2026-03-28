@@ -377,35 +377,44 @@ button:hover {
 
 @media (max-width: 800px) {
     /* 1. Fix the Nav Bar Layout */
-    nav.navbar {
-        height: 3.5rem !important; /* Slightly taller for thumbs */
-        background-color: #f0e7b4 !important;
-        display: flex !important; /* This is the key for alignment */
-        justify-content: space-between; 
-        align-items: center;
-        padding: 0 15px;
-        position: relative;
-        z-index: 99999;
+   nav.navbar {
+        height: 3.5rem !important;
+        display: flex !important; 
+        flex-direction: row !important; /* Forces items to stay side-by-side */
+        justify-content: space-between !important; 
+        align-items: center !important;
+        padding: 0 15px !important;
+        box-sizing: border-box;
     }
 
     /* 2. Style the Mobile Facebook Icon */
     .nav-fb-mobile {
         display: flex !important;
-        color: #190763;
-        font-size: 1.8rem;
-        text-decoration: none;
+        flex-shrink: 0; /* Prevents it from squishing */
     }
 
     /* 3. Adjust the Toggle Button (The 3 Bars) */
     .toggle-button {
-        display: flex !important;
-        position: static !important; /* Remove absolute so it sits on the right */
-        flex-direction: column;
-        justify-content: space-around;
-        height: 24px;
-        width: 30px;
+        display: flex !important;   /* MUST be flex to show the spans */
+        position: relative !important; 
+        top: auto !important;       /* Resets your desktop 'top: 5px' */
+        right: auto !important;     /* Resets your desktop 'right: 10px' */
+        width: 30px !important;
+        height: 24px !important;
+        flex-direction: column !important;
+        justify-content: space-between !important; /* Spaces the 3 bars evenly */
+        cursor: pointer;
+        z-index: 100001;
     }
 
+    .toggle-button .bar {
+        display: block !important;
+        width: 100% !important;
+        height: 3px !important;
+        background-color: #190763 !important; /* Matching your theme */
+        border-radius: 10px;
+    }
+    
     /* 4. The Dropdown Menu Settings */
     .navbar-links {
         display: none !important;
