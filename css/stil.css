@@ -387,15 +387,21 @@ button:hover {
         box-sizing: border-box;
     }
 
-    /* 2. Style the Mobile Facebook Icon */
-    .nav-fb-mobile {
+  /* Target the link and the icon inside it */
+    .nav-fb-mobile, .fb-nav-icon {
         display: flex !important;
-        flex-shrink: 0; /* Prevents it from squishing */
+        align-items: center;
+        justify-content: center;
+        text-decoration: none !important;
+        margin-left: 10px; /* Space from the left edge */
+        padding: 5px;
     }
 
-    .fb-nav-icon {
-    margin-left: 5px;
-    padding: 5px;
+    /* This is the part that actually makes the symbol bigger */
+    .nav-fb-mobile i, .fb-nav-icon i {
+        font-size: 2.2rem !important; /* Increase this number to go even bigger */
+        color: #190763 !important;    /* Match your dark purple theme */
+        line-height: 1 !important;
     }
     
 
