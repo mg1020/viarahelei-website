@@ -33,7 +33,7 @@ header.hprincipal-dn {
     background-repeat: no-repeat;
     max-width: 200vh;
     height: 14rem;
-    background-position: center 40%; /* This centers it both ways */
+    background-position: center 45%; /* This centers it both ways */
     background-repeat: no-repeat;
     background-size: cover; /* Ensures the image fills the area */
 }
@@ -56,6 +56,9 @@ header.hprincipal-contribuie {
     background-repeat: no-repeat;
     max-width: 200vh;
     height: 14rem;
+    background-position: center 45%; /* This centers it both ways */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image fills the area */
 }
 
 header img{
