@@ -28,7 +28,7 @@ header.hprincipal-m {
 
 
 header.hprincipal-dn {
-    background-image: url('../imagini/thereishope.jpg');
+    background-image: url('../imagini/SubCarpati_Capita.png');
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 200vh;
@@ -47,7 +47,13 @@ header.hprincipal-c {
     
 }
 
-
+header.hprincipal-contribuie {
+    background-image: url('../imagini/Vita_de_vie_VR.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 200vh;
+    height: 14rem;
+}
 
 header img{
     opacity: 1.0;
