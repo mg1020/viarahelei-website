@@ -393,6 +393,12 @@ button:hover {
         flex-shrink: 0; /* Prevents it from squishing */
     }
 
+    .fb-nav-icon {
+    margin-left: 5px;
+    padding: 5px;
+    }
+    
+
     /* 3. Adjust the Toggle Button (The 3 Bars) */
     .toggle-button {
         display: flex !important;   /* MUST be flex to show the spans */
@@ -447,10 +453,18 @@ button:hover {
     }
 
     .navbar-links li a {
-        padding: 15px;
+        display: block !important;
+        width: 100% !important;
+        
+        /* ADJUST THESE TWO FOR VERTICAL ALIGNMENT */
+        padding-top: 10px !important;    /* Less padding on top pulls text UP */
+        padding-bottom: 14px !important; /* More padding on bottom pushes text UP */
+        
+        /* RESET LINE-HEIGHT */
+        line-height: 1 !important;       /* This removes extra space around the letters */
+        height: auto !important;         /* Ensures the box doesn't have a forced desktop height */
+        
         text-align: center;
-        display: block;
-        color: #190763;
         text-decoration: none;
         font-weight: bold;
     }
