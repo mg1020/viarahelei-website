@@ -370,108 +370,82 @@ button:hover {
 
 /* --- MOBILE SETTINGS (The "Phone" Version) --- */
 
+/* --- Desktop: Hide the mobile-only icon --- */
+.nav-fb-mobile {
+    display: none;
+}
+
 @media (max-width: 800px) {
-    /* 1. Reset Nav */
+    /* 1. Fix the Nav Bar Layout */
     nav.navbar {
-        height: 3rem !important;
+        height: 3.5rem !important; /* Slightly taller for thumbs */
         background-color: #f0e7b4 !important;
+        display: flex !important; /* This is the key for alignment */
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 15px;
         position: relative;
-        display: block !important;
-        overflow: visible !important;
-        z-index: 99999 !important;
+        z-index: 99999;
     }
 
-    /* 2. Hide links by default */
+    /* 2. Style the Mobile Facebook Icon */
+    .nav-fb-mobile {
+        display: flex !important;
+        color: #190763;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+
+    /* 3. Adjust the Toggle Button (The 3 Bars) */
+    .toggle-button {
+        display: flex !important;
+        position: static !important; /* Remove absolute so it sits on the right */
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+    }
+
+    /* 4. The Dropdown Menu Settings */
     .navbar-links {
         display: none !important;
-        width: 100%;
-        background-color: #f0e7b4 !important;
         position: absolute;
-        top: 3rem;
+        top: 3.5rem;
         left: 0;
-        z-index: 100000;
+        width: 100%;
+        background-color: #f0e7b4;
     }
 
-    /* 3. The "Active" state (Check the dot before 'active') */
     .navbar-links.active {
         display: block !important;
     }
 
     .navbar-links ul {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar-links li {
-        width: 100% !important;
-        list-style: none;
-    }
-
-    .navbar-links li a {
-        display: block !important;
-        width: 100% !important;
-        padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        height: auto !important;
-        line-height: normal !important;
-    }
-
-    /* 4. The Button - IMPORTANT: Added background to make it easier to tap */
-    .toggle-button {
-        display: flex !important;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        width: 40px;
-        height: 35px;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 100001;
-        cursor: pointer;
-        background: transparent;
+        width: 100%;
+        padding: 0;
     }
 
-    .toggle-button .bar {
+    /* 5. FIX THE ARTICLES (Stacking them) */
+    main, aside {
+        width: 100% !important;
         display: block !important;
-        width: 25px;
-        height: 3px;
-        background-color: #190763 !important;
-        border-radius: 5px;
+        float: none !important;
     }
 
-    /* 1. Reset the main content area */
-main article {
-    width: 100% !important;
-    margin: 10px 0 !important;
-}
+    article.stanga, article.mijloc, article.dreapta, article {
+        width: 100% !important;
+        display: block !important;
+        float: none !important; /* This stops them from squishing side-by-side */
+        margin: 20px 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
 
-/* 2. Stack the 'Aside' articles (Stanga, Mijloc, Dreapta) */
-aside article {
-    width: 100% !important; /* Take up the full screen width */
-    float: none !important;  /* Stop them from sitting side-by-side */
-    margin: 10px 0 !important;
-    border-left: none !important; /* Optional: removes the dashed lines between them */
-    border-right: none !important;
-    display: block !important;
-}
-
-/* 3. Ensure images inside articles don't overflow */
-aside article img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto; /* Centers the images */
-}
-
-/* 4. Fix for the 'stangac' and 'dreaptac' classes if you use them on other pages */
-aside .stangac, aside .dreaptac {
-    width: 100% !important;
-    float: none !important;
-}
+    /* Hide the desktop Facebook button in the header on mobile */
+    header .button {
+        display: none !important;
+    }
 }
 
 
