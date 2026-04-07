@@ -263,7 +263,7 @@ aside h1, aside p {
     margin-left: 10px;
 }
 
-article.marturie {
+#marturie {
     border:20px solid #601D0C;
     background-color: #c8e8e3 !important;
     width: 70%;
