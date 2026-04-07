@@ -143,7 +143,7 @@ header img:hover{
         
       }
 nav.navbar {
-    background-color: #f0e7b4;
+    background-color: #e3edc0; /* #f0e7b4;*/
     height: 2.5rem;
     position: relative;
     z-index: 9999;
