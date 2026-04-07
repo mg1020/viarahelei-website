@@ -266,10 +266,10 @@ aside h1, aside p {
 #marturie {
     border:2px solid #601D0C;
     background-color: #c8e8e3 !important;
-    width: 85%;
-    margin-bottom: 7px;
-    padding-left: 10px;
-    margin-left: 10px;
+    width: 95%;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    margin-left: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
