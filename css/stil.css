@@ -265,7 +265,7 @@ aside h1, aside p {
 
 article.marturie {
     border:20px solid #601D0C;
-    background-color: #c8e8e3;
+    background-color: #c8e8e3 !important;
     width: 70%;
     margin-bottom: 7px;
     padding-left: 10px;
